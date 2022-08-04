@@ -1,0 +1,24 @@
+.main{
+}
+
+.info_about_us{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 100px;
+  .about_us, .why_we{
+    padding: 40px;
+    border-bottom: 2px solid black;
+    h2 {
+      text-align: center;
+    }
+    p{
+      margin-top: 20px;
+    }
+  }
+  .about_us{
+    margin-left: 40px;
+  }
+  .why_we {
+    margin-right: 40px;
+  }
+}
