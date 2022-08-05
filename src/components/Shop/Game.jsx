@@ -3,7 +3,12 @@ import {NavLink} from "react-router-dom";
 
 
 
-const Game = ({title, platform, price, photo}) => {
+const Game = ({title, platform, price, photo, addItemToBasket}) => {
+
+    const addItem = () => {
+        addItemToBasket(title, platform, price, photo);
+    }
+
     return (
         <div className={cls.game}>
             <div className={cls.photo}>
@@ -19,11 +24,11 @@ const Game = ({title, platform, price, photo}) => {
                 <span>{price} &#8381;</span>
             </div>
             <div className={cls.button}>
-                <NavLink to={"/basket"}>
-                    <button title={"Купить"}>
+                {/*<NavLink to={"/basket"}>*/}
+                    <button onClick={addItem} title={"Купить"}>
                         Купить
                     </button>
-                </NavLink>
+                {/*</NavLink>*/}
 
             </div>
 

@@ -3,9 +3,10 @@ import {connect} from "react-redux";
 import Game from "./Game";
 import Fuse from "fuse.js";
 import {useState} from "react";
+import {addItemToBasket} from "../../redux/basket-reducer";
 
 
-const Shop = ({gamesList}) => {
+const Shop = ({gamesList, addItemToBasket}) => {
 
     const [games, setData] = useState(gamesList);
 
@@ -45,8 +46,8 @@ const Shop = ({gamesList}) => {
             <div className={cls.games_list}>
                 {games.map(game => {
                         return (
-                            <Game title={game.title} platform={game.platform}
-                                  price={game.price} photo={game.photo}/>
+                            <Game key={game.id} title={game.title} platform={game.platform}
+                                  price={game.price} photo={game.photo} addItemToBasket={addItemToBasket}/>
                         )
                     }
                 )}
@@ -58,5 +59,4 @@ const Shop = ({gamesList}) => {
 export default connect(
     (state) => ({
         gamesList: state.shopPage.games
-    })
-)(Shop);
+    }), {addItemToBasket})(Shop);
