@@ -10,7 +10,7 @@ header {
 
 .logo {
   float: left;
-  margin: 7px 0 0 40px;
+  margin: 7px 0 0 80px;
   display: flex;
   justify-content: center;
 
@@ -42,7 +42,7 @@ header {
 
 .links{
   border-left: 2px solid transparent;
-  border-image: linear-gradient(to top, #16b6e7 35%, yellow 35%, yellow 65%,  #d50a0a 65%);
+  border-image: linear-gradient(to top, #16b6e7 35%, #d50a0a 35%, #d50a0a 65%,  yellow 65%);
   border-image-slice: 10%;
   padding-top: 55px;
   padding-right: 100px;

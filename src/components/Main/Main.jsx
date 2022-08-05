@@ -1,4 +1,5 @@
 import cls from "./Main.module.scss"
+import {NavLink} from "react-router-dom";
 
 
 const Main = () => {
@@ -29,6 +30,12 @@ const Main = () => {
                         Грязный Морти здесь кастует
                         Я не пру, я, блять, пиздую</p>
                 </div>
+            </div>
+            <div className={cls.button_to_shop}>
+                <NavLink to={"/shop"}>
+                    <button title={"В магазин"}>В магазин</button>
+                </NavLink>
+
             </div>
         </div>
     )

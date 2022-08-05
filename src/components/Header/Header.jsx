@@ -11,14 +11,14 @@ const Header = () => {
                     <img src={logoImg} alt=""/>
                 </div>
                 <div className={cls.logo_span}>
-                    <NavLink to={""}>GameBoy</NavLink>
+                    <NavLink to={"/"} title={"На главную"}>GameBoy</NavLink>
                 </div>
             </div>
             <div className={cls.links}>
-                    <NavLink to={""}>Магазин</NavLink>
-                    <NavLink to={""}>Условия покупки</NavLink>
-                    <NavLink to={""}>Инструкция к применению</NavLink>
-                    <NavLink to={""}>Вход</NavLink>
+                    <NavLink to={"/shop"} title={"В магазин"}>Магазин</NavLink>
+                    <NavLink to={"/instruction"} title={"К интсрукции"}>Инструкция к применению</NavLink>
+                    <NavLink to={"/basket"} title={"В корзину"}>Корзина</NavLink>
+                    <NavLink to={"/login"} title={"Войти"}>Вход</NavLink>
             </div>
         </header>
     )

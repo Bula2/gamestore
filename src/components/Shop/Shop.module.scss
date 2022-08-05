@@ -1,0 +1,100 @@
+@import "../../variables";
+
+.top{
+  display: flex;
+  justify-content: space-between;
+  h2{
+    margin-top: 30px;
+    margin-left: 100px;
+    font-size: 2em;
+  }
+  .search{
+    width: 20%;
+    margin-top: 20px;
+    margin-right: 100px;
+    label {
+      display: block;
+      font-size: 1.4em;
+    }
+    input {
+      box-sizing: border-box;
+      margin-top: 10px;
+      width: 90%;
+      height: 30px;
+      outline: none;
+      border: 1.5px solid black;
+      border-radius: 5px;
+      padding: 3px;
+      color: $text-color;
+      background-color: ghostwhite;
+      &:focus{
+        border: 2px solid black;
+      }
+    }
+  }
+
+}
+
+.games_list{
+  width: 80%;
+  margin: 40px auto 40px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.game{
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-rows: 2fr 1fr 1fr 1fr 1fr;
+  height: 400px;
+  width: 200px;
+  border: 2px solid black;
+  border-radius: 10px;
+  .photo{
+    img{
+      border-radius: 10px;
+      box-sizing: border-box;
+      width: 196px;
+      height: 200px;
+      border: 1.5px solid black;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+  .info{
+    padding: 6px;
+    a{
+      font-size: 1.15em;
+      color: $text-color;
+      line-height: 125%;
+      &:hover{
+        border-bottom: 1.5px solid $text-color;
+      }
+    }
+  }
+
+  .platform, .price{
+    padding: 6px;
+    span{
+      color: $text-color;
+    }
+  }
+
+  .button{
+    display: flex;
+    justify-content: center;
+    margin: 6px;
+    button{
+      width: 90px;
+      height: 30px;
+      border: 1.5px solid black;
+      border-radius: 10px;
+      background-color: $button-color;
+      &:hover, &:active{
+        border: 2.5px solid black;
+      }
+    }
+  }
+}
