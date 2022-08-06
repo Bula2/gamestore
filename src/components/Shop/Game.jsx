@@ -2,11 +2,10 @@ import cls from "./Shop.module.scss"
 import {NavLink} from "react-router-dom";
 
 
-
-const Game = ({title, platform, price, photo, addItemToBasket}) => {
+const Game = ({title, platform, price, photo, addItemToBasket, id}) => {
 
     const addItem = () => {
-        addItemToBasket(title, platform, price, photo);
+        addItemToBasket(title, platform, price, photo, id);
     }
 
     return (
@@ -24,12 +23,9 @@ const Game = ({title, platform, price, photo, addItemToBasket}) => {
                 <span>{price} &#8381;</span>
             </div>
             <div className={cls.button}>
-                {/*<NavLink to={"/basket"}>*/}
-                    <button onClick={addItem} title={"Купить"}>
-                        Купить
-                    </button>
-                {/*</NavLink>*/}
-
+                <button onClick={addItem} title={"Купить"}>
+                    Добавить в корзину
+                </button>
             </div>
 
         </div>

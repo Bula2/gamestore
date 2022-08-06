@@ -85,10 +85,11 @@
   .button{
     display: flex;
     justify-content: center;
-    margin: 6px;
+    margin: 10px;
     button{
-      width: 90px;
-      height: 30px;
+      padding: 5px;
+      width: 110px;
+      height: 45px;
       border: 1.5px solid black;
       border-radius: 10px;
       background-color: $button-color;

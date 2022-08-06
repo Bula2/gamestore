@@ -46,7 +46,7 @@ const Shop = ({gamesList, addItemToBasket}) => {
             <div className={cls.games_list}>
                 {games.map(game => {
                         return (
-                            <Game key={game.id} title={game.title} platform={game.platform}
+                            <Game key={game.id} id={game.id} title={game.title} platform={game.platform}
                                   price={game.price} photo={game.photo} addItemToBasket={addItemToBasket}/>
                         )
                     }

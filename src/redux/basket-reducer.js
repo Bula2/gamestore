@@ -1,26 +1,24 @@
- const ADD_POST = "basket/ADD_POST";
+
+const ADD_POST = "basket/ADD_POST";
 
 let initialState = {
-    items : []
+    items: new Map()
 }
 
 const shopReducer = (state = initialState, action) => {
     switch (action.type) {
-
         case ADD_POST: {
-
-            let newItem ={
-                id: state.items.length + 1,
+            let newItem = {
+                id: action.id,
                 title: action.title,
                 platform: action.platform,
                 price: action.price,
                 photo: action.photo
             }
-
             return {
                 ...state,
-                items: [...state.items, newItem]
-            };
+                items: state.items.set(newItem.id, newItem)
+            }
         }
 
         default:
@@ -28,6 +26,7 @@ const shopReducer = (state = initialState, action) => {
     }
 }
 
-export const addItemToBasket = (title, platform, price, photo) => ({type: ADD_POST, title, platform, price, photo})
+export const addItemToBasket = (title, platform, price, photo, id) =>
+    ({type: ADD_POST, title, platform, price, photo, id})
 
 export default shopReducer;
