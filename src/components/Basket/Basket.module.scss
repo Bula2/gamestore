@@ -1,23 +1,23 @@
 @import "../../variables";
 
-.logo{
+.logo {
   margin-top: 30px;
   margin-left: 100px;
   font-size: 2em;
 }
 
-.list_menu{
+.list_menu {
   display: flex;
   justify-content: space-between;
 }
 
-.basket_list{
+.basket_list {
   margin-top: 50px;
   margin-left: 120px;
   margin-bottom: 50px;
 }
 
-.basket_item{
+.basket_item {
   min-width: 350px;
   margin-top: 30px;
   display: grid;
@@ -25,24 +25,29 @@
   border-bottom: 1px solid black;
   padding: 0 10px;
   border-radius: 20px;
-  .photo{
-    img{
+
+  .photo {
+    img {
       width: 100px;
       height: 120px;
     }
   }
-  .info{
+
+  .info {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    span{
+
+    span {
       display: block;
       margin-top: 10px;
-      &:first-child{
+
+      &:first-child {
         font-size: 1.3em;
       }
     }
-    button{
+
+    button {
       margin-top: 10px;
       margin-bottom: 10px;
       width: 70px;
@@ -51,22 +56,56 @@
       border-radius: 10px;
       background-color: #fd703a;
       color: #ffffff;
-      &:hover, &:active{
+
+      &:hover, &:active {
         border: 2.5px solid black;
       }
     }
   }
 }
 
-.buy_menu{
-  //position: fixed;
-  //top: 18%;
-  //left: 80%;
-  //bottom: 20%;
-  margin-top: 100px;
+
+.buy_menu {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin-top: 40px;
   margin-right: 50px;
   margin-bottom: 50px;
   border: 2px solid black;
-  min-height: 400px;
+  min-height: 200px;
   min-width: 400px;
+
+  .header_buy_menu {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 10px 0 10px;
+    span{
+      font-size: 1.2em;
+      font-weight: 600;
+    }
+    .buy_menu_info {
+      border-radius: 10px;
+      width: 120px;
+      border: 1px solid black;
+      font-size: 0.7em;
+      padding: 10px 10px 10px 30px;
+    }
+  }
+  .buy_menu_button{
+    margin: 20% auto 0;
+    button {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      width: 100px;
+      height: 30px;
+      border: 1.5px solid black;
+      border-radius: 10px;
+      background-color: $button-color;
+      &:hover, &:active {
+        border: 2.5px solid black;
+      }
+    }
+  }
+
 }
