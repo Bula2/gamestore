@@ -2,14 +2,19 @@ import cls from "./Shop.module.scss"
 import {NavLink} from "react-router-dom";
 
 
-const Game = ({title, platform, price, photo, addItemToBasket, id}) => {
+const Game = ({title, platform, price, photo, id, isAdded, addItemToBasket, elInBasket}) => {
 
     const addItem = () => {
+        let el = document.getElementById(id);
+        el.style.gridTemplateRows = "2fr 1fr 1fr 1fr 1fr 1fr";
         addItemToBasket(title, platform, price, photo, id);
+        elInBasket(id, true);
+        setTimeout(elInBasket, 2000, id, false);
+        el.style.gridTemplateRows = "2fr 1fr 1fr 1fr 1fr";
     }
 
     return (
-        <div className={cls.game}>
+        <div id={id} className={cls.game}>
             <div className={cls.photo}>
                 <img src={photo} alt="Тут фотка игры" title={title}/>
             </div>
@@ -27,6 +32,12 @@ const Game = ({title, platform, price, photo, addItemToBasket, id}) => {
                     Добавить в корзину
                 </button>
             </div>
+            {isAdded &&
+                <div className={cls.game_in_basket}>
+                    <span>Игра добавлена в <NavLink to={"/basket"}>корзину</NavLink></span>
+                </div>
+            }
+
 
         </div>
     )

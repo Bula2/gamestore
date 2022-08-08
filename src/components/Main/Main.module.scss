@@ -1,10 +1,18 @@
 @import "../../variables";
 
+.gameboy{
+  font-size: 1.2em;
+  font-weight: bold;
+  color: fuchsia;
+}
+
 .info_about_us{
+  line-height: 125%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 100px;
   .about_us, .why_we{
+    min-height: 100px;
     padding: 40px;
     border-bottom: 2px solid black;
     h2 {

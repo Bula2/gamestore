@@ -1,7 +1,7 @@
 import cls from "./Basket.module.scss"
 
-const BasketItem = ({id, title, platform, price, photo}) => {
-    debugger
+const BasketItem = ({id, title, platform, price, photo, delItemFromBasket}) => {
+
     return (
         <div className={cls.basket_item}>
             <div className={cls.photo}>
@@ -14,7 +14,7 @@ const BasketItem = ({id, title, platform, price, photo}) => {
                     <span>{price}&#8381;</span>
                 </div>
                 <div>
-                    <button>Удалить</button>
+                    <button onClick={() => delItemFromBasket(id)}>Удалить</button>
                 </div>
             </div>
 

@@ -1,10 +1,30 @@
 @import "../../variables";
 
-.logo {
-  margin-top: 30px;
-  margin-left: 100px;
-  font-size: 2em;
+.basket_header{
+  display: flex;
+  justify-content: space-between;
+  .logo {
+    margin-top: 30px;
+    margin-left: 100px;
+    h2{
+      font-size: 1.7em;
+    }
+  }
+  .link_to_shop {
+    margin-top: 35px;
+    margin-right: 100px;
+    a{
+      color: mediumvioletred;
+      font-weight: bold;
+      font-size: 1.5em;
+    }
+    a:hover{
+      border-bottom: 1.5px solid mediumvioletred;
+    }
+  }
 }
+
+
 
 .list_menu {
   display: flex;
@@ -12,7 +32,7 @@
 }
 
 .basket_list {
-  margin-top: 50px;
+  margin-top: 20px;
   margin-left: 120px;
   margin-bottom: 50px;
 }
@@ -66,6 +86,7 @@
 
 
 .buy_menu {
+  background-color: whitesmoke;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -79,7 +100,8 @@
   .header_buy_menu {
     display: flex;
     justify-content: space-between;
-    margin: 20px 10px 0 10px;
+    padding: 20px 10px 10px 10px;
+    border-bottom: 1px solid black;
     span{
       font-size: 1.2em;
       font-weight: 600;
@@ -90,18 +112,32 @@
       border: 1px solid black;
       font-size: 0.7em;
       padding: 10px 10px 10px 30px;
+      span{
+        margin-left: -10px;
+        font-size: 0.87em;
+        color: #595958;
+      }
     }
   }
+
+  .buy_menu_sum{
+    margin: 10% auto 0;
+    span{
+      font-size: 1.2em;
+    }
+  }
+
   .buy_menu_button{
-    margin: 20% auto 0;
+    margin: 10% auto 0;
     button {
       margin-top: 10px;
       margin-bottom: 10px;
-      width: 100px;
-      height: 30px;
+      width: 300px;
+      height: 60px;
       border: 1.5px solid black;
       border-radius: 10px;
       background-color: $button-color;
+      font-size: 1.3em;
       &:hover, &:active {
         border: 2.5px solid black;
       }

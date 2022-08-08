@@ -1,7 +1,14 @@
 import cls from "./Basket.module.scss"
+import {useState} from "react";
 
 const BasketBuyMenu = ({basketItems}) => {
-    debugger
+
+    let [sum] = useState(0)
+
+     basketItems.forEach(item => {
+            sum += item.price
+    })
+
     return (
         <div className={cls.buy_menu}>
             <div className={cls.header_buy_menu}>
@@ -9,17 +16,24 @@ const BasketBuyMenu = ({basketItems}) => {
                     <span>Список игр</span>
                 </div>
                 <div className={cls.buy_menu_info}>
-                    <ul>
-                        {basketItems.map(item => {
-                            return (
-                                <li>{item.title}</li>
-                            )
-                        })}
-                    </ul>
+                    {basketItems.length > 0 ?
+                        <ul>
+                            {basketItems.map(item => {
+                                return (
+                                    <li key={item.id}>{item.title}</li>
+                                )
+                            })}
+                        </ul>
+                    : <span>Тут пока пустовато :(</span>
+                    }
+
                 </div>
             </div>
+            <div className={cls.buy_menu_sum}>
+                <span>Итого: {sum} &#8381;</span>
+            </div>
             <div className={cls.buy_menu_button}>
-                <button>Купить</button>
+                <button>Перейти к оформлению</button>
             </div>
             <div>
 

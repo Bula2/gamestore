@@ -1,5 +1,6 @@
 
-const ADD_POST = "basket/ADD_POST";
+const ADD_ITEM = "basket/ADD_ITEM";
+const DEL_ITEM = "basket/DEL_ITEM";
 
 let initialState = {
     items: new Map()
@@ -7,7 +8,7 @@ let initialState = {
 
 const shopReducer = (state = initialState, action) => {
     switch (action.type) {
-        case ADD_POST: {
+        case ADD_ITEM: {
             let newItem = {
                 id: action.id,
                 title: action.title,
@@ -21,12 +22,23 @@ const shopReducer = (state = initialState, action) => {
             }
         }
 
+        case DEL_ITEM: {
+            state.items.delete(action.id);
+            return {
+                ...state
+            }
+        }
+
         default:
             return (state);
     }
 }
 
 export const addItemToBasket = (title, platform, price, photo, id) =>
-    ({type: ADD_POST, title, platform, price, photo, id})
+    ({type: ADD_ITEM, title, platform, price, photo, id})
+
+export const delItemFromBasket = (id) =>
+    ({type: DEL_ITEM, id})
+
 
 export default shopReducer;
