@@ -1,18 +1,22 @@
 @import "../../variables";
 
 header {
-  height: 100px;
+  min-height: 100px;
+  width: 100%;
   background-image: linear-gradient(to right, #3fe3c9, #cef5f0, #f1f1f1);
   border-bottom: 2px solid black;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .logo {
   float: left;
-  margin: 7px 0 0 80px;
+  padding: 7px 40px 0 60px;
   display: flex;
   justify-content: center;
+  border-right: 2px solid transparent;
+  border-image: linear-gradient(to top, #16b6e7 35%, #d50a0a 35%, #d50a0a 65%, yellow 65%);
+  border-image-slice: 10%;
 
   .logo_span {
     margin-top: 43.8px;
@@ -22,7 +26,8 @@ header {
       color: $text-color;
       font-size: 1.5em;
       font-weight: 500;
-      &:hover{
+
+      &:hover {
         font-weight: bolder;
       }
     }
@@ -32,7 +37,8 @@ header {
     img {
       width: 70px;
       transition: 1.8s ease-in-out;
-      &:hover{
+
+      &:hover {
         transform: rotate(360deg);
       }
     }
@@ -40,20 +46,84 @@ header {
   }
 }
 
-.links{
-  border-left: 2px solid transparent;
-  border-image: linear-gradient(to top, #16b6e7 35%, #d50a0a 35%, #d50a0a 65%,  yellow 65%);
-  border-image-slice: 10%;
+.links {
+  width: 100%;
+  display: flex;
+  justify-content: center;
   padding-top: 55px;
-  padding-right: 100px;
-  a{
+
+  a {
     margin-left: 60px;
     color: $text-color;
     font-size: 1.3em;
     font-weight: 200;
 
-    &:hover{
+    &:hover {
       border-bottom: 1.5px solid $text-color;
     }
   }
 }
+
+.menu_sc {
+  margin-left: 10%;
+  display: none;
+  flex-direction: column;
+  margin-right: 10%;
+  margin-top: 40px;
+
+  .menu_sc_button {
+    .menu_sc_button_button {
+      font-size: 1.3em;
+      color: #f15f06;
+    }
+  }
+
+  .menu_sc_items {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    word-wrap: break-word;
+
+    a {
+      color: $text-color;
+      margin-top: 10px;
+      margin-bottom: 5px;
+      font-size: 1.1em;
+
+      &:hover {
+        border-bottom: 1.5px solid $text-color;
+      }
+    }
+  }
+}
+
+@media (max-width: 930px) {
+  .links {
+    display: none;
+  }
+  .menu_sc {
+    display: flex;
+  }
+}
+
+@media (max-width: 430px) {
+  .logo {
+    padding: 7px 20px 0 25px;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    .logo_span {
+      a {
+        font-size: 1em;
+      }
+
+      .logo_img {
+        img {
+          width: 30px;
+        }
+
+      }
+    }
+  }
+}
+

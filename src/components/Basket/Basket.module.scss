@@ -1,29 +1,33 @@
 @import "../../variables";
 
-.basket_header{
+.basket_header {
   display: flex;
   justify-content: space-between;
+
   .logo {
     margin-top: 30px;
     margin-left: 100px;
-    h2{
+
+    h2 {
       font-size: 1.7em;
     }
   }
+
   .link_to_shop {
     margin-top: 35px;
     margin-right: 100px;
-    a{
+
+    a {
       color: mediumvioletred;
       font-weight: bold;
       font-size: 1.5em;
     }
-    a:hover{
+
+    a:hover {
       border-bottom: 1.5px solid mediumvioletred;
     }
   }
 }
-
 
 
 .list_menu {
@@ -38,7 +42,7 @@
 }
 
 .basket_item {
-  min-width: 350px;
+  min-width: 250px;
   margin-top: 30px;
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -54,6 +58,7 @@
   }
 
   .info {
+    margin-left: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -102,17 +107,20 @@
     justify-content: space-between;
     padding: 20px 10px 10px 10px;
     border-bottom: 1px solid black;
-    span{
+
+    span {
       font-size: 1.2em;
       font-weight: 600;
     }
+
     .buy_menu_info {
       border-radius: 10px;
       width: 120px;
       border: 1px solid black;
       font-size: 0.7em;
       padding: 10px 10px 10px 30px;
-      span{
+
+      span {
         margin-left: -10px;
         font-size: 0.87em;
         color: #595958;
@@ -120,15 +128,17 @@
     }
   }
 
-  .buy_menu_sum{
+  .buy_menu_sum {
     margin: 10% auto 0;
-    span{
+
+    span {
       font-size: 1.2em;
     }
   }
 
-  .buy_menu_button{
+  .buy_menu_button {
     margin: 10% auto 0;
+
     button {
       margin-top: 10px;
       margin-bottom: 10px;
@@ -138,8 +148,117 @@
       border-radius: 10px;
       background-color: $button-color;
       font-size: 1.3em;
+
       &:hover, &:active {
         border: 2.5px solid black;
+      }
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+
+  .list_menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .basket_list {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .basket_item {
+    max-width: 350px;
+  }
+
+  .buy_menu {
+    margin: 20px auto;
+    width: 600px;
+  }
+}
+
+@media (max-width: 630px) {
+  .basket_list {
+    width: 40%;
+  }
+  .basket_item {
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 200px;
+    .photo {
+      img {
+        width: 100px;
+        height: 100px;
+      }
+    }
+
+    .info {
+      span {
+        font-size: 0.7em;
+        &:first-child{
+          font-size: 0.8em;
+        }
+      }
+      button {
+        width: 60px;
+        height: 20px;
+        font-size: 0.6em;
+      }
+    }
+  }
+  .buy_menu {
+    margin: 20px auto;
+    width: 400px;
+  }
+}
+
+@media (max-width: 430px){
+  .link_to_shop{
+    display: none;
+  }
+
+  .basket_list {
+    width: 20%;
+  }
+
+  .buy_menu {
+    justify-content: center;
+
+    .header_buy_menu {
+      padding: 5px;
+      justify-content: center;
+
+      span {
+        font-size: .9em;
+      }
+
+      .buy_menu_info {
+        border-radius: 10px;
+        width: 60px;
+        border: 1px solid black;
+        font-size: 0.55em;
+        padding-left: 15px;
+      }
+    }
+
+    .buy_menu_sum {
+      span {
+        font-size: 0.7em;
+      }
+    }
+
+    .buy_menu_button {
+      margin: 10% auto 0;
+
+      button {
+        width: 160px;
+        height: 40px;
+        font-size: .9em;
+
       }
     }
   }

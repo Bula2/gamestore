@@ -1,7 +1,6 @@
 import cls from "./Login.module.scss"
 import {useState} from "react";
 
-
 const Login = () => {
 
     let [text, changeText] = useState(null)

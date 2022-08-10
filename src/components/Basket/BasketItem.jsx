@@ -17,7 +17,6 @@ const BasketItem = ({id, title, platform, price, photo, delItemFromBasket}) => {
                     <button onClick={() => delItemFromBasket(id)}>Удалить</button>
                 </div>
             </div>
-
         </div>
 
     )
