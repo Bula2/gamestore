@@ -1,5 +1,6 @@
 import cls from "./Login.module.scss"
 import {useState} from "react";
+import c from "classnames"
 
 const Login = () => {
 
@@ -13,7 +14,7 @@ const Login = () => {
     }
 
     return (
-        <div className={cls.login}>
+        <div className={c(cls.login,"animate__animated", "animate__fadeIn")}>
             <div className={cls.header}>
                 <h2>Вход</h2>
             </div>

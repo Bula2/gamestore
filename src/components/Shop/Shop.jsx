@@ -6,7 +6,7 @@ import {useState} from "react";
 import {addItemToBasket} from "../../redux/basket-reducer";
 import {elInBasket} from "../../redux/shop-reducer";
 import {NavLink} from "react-router-dom";
-
+import c from "classnames"
 
 const Shop = ({gamesList, addItemToBasket, elInBasket}) => {
 
@@ -36,7 +36,7 @@ const Shop = ({gamesList, addItemToBasket, elInBasket}) => {
     };
 
     return (
-        <div className={cls.shop}>
+        <div className={c(cls.shop, "animate__animated", "animate__fadeIn")}>
             <div className={cls.top}>
                 <div className={cls.search}>
                     <label htmlFor="site-search">Найти:</label>

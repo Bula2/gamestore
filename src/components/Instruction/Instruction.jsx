@@ -1,10 +1,11 @@
 import cls from "./Instruction.module.scss"
 import {NavLink} from "react-router-dom";
+import c from "classnames"
 
 
 const Instruction = () => {
     return (
-        <div className={cls.instruction}>
+        <div className={c(cls.instruction, "animate__animated", "animate__fadeIn")}>
             <div className={cls.header}>
                 <h2>Инструкция</h2>
             </div>

@@ -6,11 +6,12 @@ import BasketBuyMenu from "./BasketBuyMenu";
 import {delItemFromBasket} from "../../redux/basket-reducer";
 import {basketItemsSelector} from "../../redux/basket-selectors";
 import {NavLink} from "react-router-dom";
+import c from "classnames"
 
 const Basket = ({basketItems, delItemFromBasket}) => {
 
     return (
-        <div className={cls.basket}>
+        <div className={c(cls.basket, "animate__animated", "animate__fadeIn")}>
             <div className={cls.basket_header}>
                 <div className={cls.logo}>
                     <h2>Корзина</h2>

@@ -1,19 +1,21 @@
 import cls from "./Main.module.scss"
 import {NavLink} from "react-router-dom";
+import "animate.css"
+import c from "classnames"
 
 
 const Main = () => {
     return (
-        <div className={cls.main}>
+        <div className={c(cls.main, "animate__animated", "animate__fadeIn")}>
             <div className={cls.info_about_us}>
                 <div className={cls.about_us}>
-                    <h2>О нас</h2>
+                    <h2 className={c("animate__animated", "animate__flipInX")}>О нас</h2>
                     <p>Привет, мы команда <span className={cls.gameboy}>GameBoy</span>.
                     Мы предоставляем возможность приобрести игры для Play Station в кратчайший срок
                     без затруднений и усилий. Ваша игра - наша забота</p>
                 </div>
                 <div className={cls.why_we}>
-                    <h2>Почему мы</h2>
+                    <h2 className={c("animate__animated", "animate__flipInX")}>Почему мы</h2>
                     <p>Мы классные, умелый, современный, необъемлемые.
                         Шли отдельно, без системы, прямо к цели, мы бесцененны.
                         Цепь танцует вальс на теле, твоя подруга на прицеле
