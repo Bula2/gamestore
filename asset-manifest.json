@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/gamestore/static/css/main.d9828da6.css",
+    "main.css": "/gamestore/static/css/main.ac463dd7.css",
     "main.js": "/gamestore/static/js/main.47640cc9.js",
     "static/js/787.f1f46333.chunk.js": "/gamestore/static/js/787.f1f46333.chunk.js",
     "static/media/ufc4.png": "/gamestore/static/media/ufc4.5f815c289c9766fc07ac.png",
@@ -11,12 +11,12 @@
     "static/media/cyberpunk.jpg": "/gamestore/static/media/cyberpunk.82e84bc35ad07bbfbd61.jpg",
     "static/media/rubik.png": "/gamestore/static/media/rubik.6ed6f3b47769d628e050.png",
     "index.html": "/gamestore/index.html",
-    "main.d9828da6.css.map": "/gamestore/static/css/main.d9828da6.css.map",
+    "main.ac463dd7.css.map": "/gamestore/static/css/main.ac463dd7.css.map",
     "main.47640cc9.js.map": "/gamestore/static/js/main.47640cc9.js.map",
     "787.f1f46333.chunk.js.map": "/gamestore/static/js/787.f1f46333.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d9828da6.css",
+    "static/css/main.ac463dd7.css",
     "static/js/main.47640cc9.js"
   ]
 }
