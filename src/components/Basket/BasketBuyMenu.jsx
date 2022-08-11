@@ -1,9 +1,23 @@
 import cls from "./Basket.module.scss"
 import {useState} from "react";
+import {NavLink} from "react-router-dom";
 
 const BasketBuyMenu = ({basketItems}) => {
 
     let [sum] = useState(0)
+    let [isBuy, setIsBuy] = useState(false)
+    let [isBasketEmpty, setIsBasketEmpty] = useState(false)
+
+    const buttonHandling = () => {
+        if (basketItems.length === 0) {
+            setIsBasketEmpty(true);
+            setIsBuy(false)
+        } else {
+            setIsBuy(true)
+        }
+
+
+    }
 
     basketItems.forEach(item => {
         sum += item.price
@@ -34,7 +48,20 @@ const BasketBuyMenu = ({basketItems}) => {
                     <span>Итого: {sum} &#8381;</span>
                 </div>
                 <div className={cls.buy_menu_button}>
-                    <button>Перейти к оформлению</button>
+                    <button onClick={buttonHandling}>Перейти к оформлению</button>
+                    {
+                        isBasketEmpty &&
+                        <div className={cls.buy_menu_req}>
+                            <span>Корзина пуста</span>
+                        </div>
+                    }
+                    {isBuy &&
+                        <div className={cls.buy_menu_req}>
+                        <span>
+                            Необходимо <NavLink to={"/login"} title={"Перейти к входу"}>Войти в аккаунт</NavLink>
+                        </span>
+                        </div>
+                    }
                 </div>
             </div>
             <div className={cls.buy_menu_mobile}>
@@ -42,7 +69,20 @@ const BasketBuyMenu = ({basketItems}) => {
                     <span>Итого: {sum} &#8381;</span>
                 </div>
                 <div className={cls.buy_menu_button_mobile}>
-                    <button>Перейти к оформлению</button>
+                    <button onClick={buttonHandling}>Перейти к оформлению</button>
+                    {
+                        isBasketEmpty &&
+                        <div className={cls.buy_menu_req}>
+                            <span>Корзина пуста</span>
+                        </div>
+                    }
+                    {isBuy &&
+                        <div className={cls.buy_menu_req}>
+                        <span>
+                            Необходимо <NavLink to={"/login"} title={"Перейти к входу"}>Войти в аккаунт</NavLink>
+                        </span>
+                        </div>
+                    }
                 </div>
             </div>
         </>
