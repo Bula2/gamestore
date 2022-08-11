@@ -156,6 +156,10 @@
   }
 }
 
+.buy_menu_mobile{
+  display: none;
+}
+
 @media (max-width: 1100px) {
 
   .list_menu {
@@ -216,7 +220,7 @@
   }
 }
 
-@media (max-width: 430px){
+@media (max-width: 480px){
   .link_to_shop{
     display: none;
   }
@@ -224,43 +228,50 @@
   .basket_list {
     width: 20%;
   }
+}
 
-  .buy_menu {
+@media (max-width: 420px) {
+
+  .basket_list{
+    width: 60%;
+    margin-left: 10px;
+    .basket_item{
+      width: 60%;
+      margin: 10px 5px;
+    }
+  }
+
+  .buy_menu{
+    display: none;
+  }
+
+  .buy_menu_mobile{
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-
-    .header_buy_menu {
-      padding: 5px;
-      justify-content: center;
-
-      span {
-        font-size: .9em;
+    text-align: center;
+    .buy_menu_sum_mobile{
+      span{
+        color: $text-color;
       }
-
-      .buy_menu_info {
+    }
+    .buy_menu_button_mobile{
+      button{
+        background-color: $button-color;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 120px;
+        height: 30px;
+        border: 1.5px solid black;
         border-radius: 10px;
-        width: 60px;
-        border: 1px solid black;
-        font-size: 0.55em;
-        padding-left: 15px;
-      }
-    }
-
-    .buy_menu_sum {
-      span {
-        font-size: 0.7em;
-      }
-    }
-
-    .buy_menu_button {
-      margin: 10% auto 0;
-
-      button {
-        width: 160px;
-        height: 40px;
-        font-size: .9em;
-
+        font-size: 0.6em;
+        &:hover, &:active {
+          border: 2.5px solid black;
+        }
       }
     }
   }
+
+
 
 }

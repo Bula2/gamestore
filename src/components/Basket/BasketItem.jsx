@@ -19,6 +19,7 @@ const BasketItem = ({id, title, platform, price, photo, delItemFromBasket}) => {
             </div>
         </div>
 
+
     )
 }
 
