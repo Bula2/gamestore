@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/gamestore/static/css/main.51b68720.css",
-    "main.js": "/gamestore/static/js/main.ed72d209.js",
+    "main.js": "/gamestore/static/js/main.ada53639.js",
     "static/js/787.f1f46333.chunk.js": "/gamestore/static/js/787.f1f46333.chunk.js",
     "static/media/ufc4.png": "/gamestore/static/media/ufc4.5f815c289c9766fc07ac.png",
     "static/media/Mortal_Kombat_11.jpg": "/gamestore/static/media/Mortal_Kombat_11.1ad39abe403cf425cd2f.jpg",
@@ -12,11 +12,11 @@
     "static/media/rubik.png": "/gamestore/static/media/rubik.6ed6f3b47769d628e050.png",
     "index.html": "/gamestore/index.html",
     "main.51b68720.css.map": "/gamestore/static/css/main.51b68720.css.map",
-    "main.ed72d209.js.map": "/gamestore/static/js/main.ed72d209.js.map",
+    "main.ada53639.js.map": "/gamestore/static/js/main.ada53639.js.map",
     "787.f1f46333.chunk.js.map": "/gamestore/static/js/787.f1f46333.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.51b68720.css",
-    "static/js/main.ed72d209.js"
+    "static/js/main.ada53639.js"
   ]
 }
