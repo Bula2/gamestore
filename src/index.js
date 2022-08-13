@@ -18,5 +18,6 @@ root.render(
   </React.StrictMode>
 );
 
-
 reportWebVitals();
+
+// Icons made by "https://www.freepik.com"

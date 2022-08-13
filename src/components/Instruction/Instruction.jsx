@@ -18,7 +18,7 @@ const Instruction = () => {
             </ol>
             </div>
             <div className={cls.button}>
-                <button><NavLink to={"/shop"}>Все понял<br/>Лечу в магазин</NavLink></button>
+                <NavLink to={"/shop"}><button>Все понял<br/>Лечу в магазин</button></NavLink>
             </div>
         </div>
     )
